@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+from sys import argv
+
+script, filename = argv
+
+f1 = open(filename, 'r+')
+repstr = f1.read()
+f1.close()
+f2 = open(filename, 'w')
+repstr = repstr.replace('/usr/bin/perl', '/usr/bin/perl')
+f2.write(repstr)
+f2.close()
